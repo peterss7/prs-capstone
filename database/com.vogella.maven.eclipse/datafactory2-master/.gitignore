@@ -1,0 +1,8 @@
+# binar
+target/*
+.project
+.settings
+.classpath/target
+.classpath
+.idea/*
+*.iml

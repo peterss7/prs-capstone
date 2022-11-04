@@ -6,6 +6,8 @@ GO
 
 CREATE DATABASE PRS;
 
+DROP DATABASE PRS;
+
 USE PRS;
 GO
 
@@ -21,6 +23,12 @@ CREATE TABLE Users (
 	IsAdmin			BIT					NOT NULL	
 );
 
+DROP TABLE Users;
+
+SELECT * FROM Users;
+
+
+
 CREATE TABLE Vendors
 (
 	ID			INTEGER			NOT NULL IDENTITY PRIMARY KEY,
@@ -33,6 +41,8 @@ CREATE TABLE Vendors
 	Phone		VARCHAR(12)		NULL,
 	Email		VARCHAR(255)	NULL
 );
+
+DROP TABLE Vendors;
 
 CREATE TABLE Products
 (
@@ -51,6 +61,8 @@ CREATE TABLE Products
 		FOREIGN KEY (VendorID) REFERENCES Vendors(ID)
 );
 
+DROP TABLE Products;
+
 CREATE TABLE Requests
 (
 	ID					INTEGER			NOT NULL IDENTITY PRIMARY KEY,
@@ -68,6 +80,8 @@ CREATE TABLE Requests
 		FOREIGN KEY (UserID) REFERENCES Users(ID)
 );
 
+DROP TABLE Requests;
+
 CREATE TABLE RequestLines
 (
 	ID				INTEGER			NOT NULL IDENTITY PRIMARY KEY,
@@ -81,3 +95,5 @@ CREATE TABLE RequestLines
 		FOREIGN KEY (ProductID) REFERENCES Products(ID)
 
 );
+
+
