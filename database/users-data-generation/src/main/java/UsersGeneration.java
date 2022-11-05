@@ -42,11 +42,11 @@ public class UsersGeneration
 		"VA", "WA", "WV", "WI", "WY"};
 	
 	// These are the email hosts for generated user email addresses.
-	private static String[] emailHosts = { "gma1l", "hotma1l", "yah00",
-		"somema1l", "everyma1l", "ma1lbox", "b1zmail", "ma1l2u" };
+	private static String[] emailHosts = { "gmail", "hotmail", "yahoo",
+		"somemail", "everymail", "mailbox", "bizmail", "mail2u" };
 	
 	// Top level domains, this is the last part of the generated email addresses
-	private static String[] tlds = { "org", "net", "com", "biz", "us", "co.uk" };
+	private static String[] tlds = { ".org", ".net", ".com", ".biz", ".us", "co.uk" };
 
 	
 	// The city where the user is located, assigned randomly
