@@ -207,11 +207,21 @@ public class UsersGeneration
     		firstName = df.getItem(firstNames, 99, "Benjamin");    		
     		lastName = df.getItem(lastNames, 99, "King");
     		
+    		// Some last names have spaces in them, and they need to be removed when making the email address
+    		// First, turn the last name into a char array
+    		char [] noSpacesLastName = lastName.toCharArray();
+    		String emailLastName = "";
+    		
+    		for (int j = 0; j < lastName.length(); j++) {
+    			if (noSpacesLastName[j] != ' ')
+    				emailLastName += noSpacesLastName[j];
+    		}
+    		
     		// ways to randomly create email address formats
     		if (rand.nextInt(100) > 80)
-    			emailAddress = firstName + "." + lastName;
+    			emailAddress = firstName + "." + emailLastName;
     		else 
-    			emailAddress = firstName.charAt(0) + lastName;
+    			emailAddress = firstName.charAt(0) + emailLastName;
     		
     		// randomly assigns random numbers, or doesn't.
     		if (rand.nextInt(100) > 25)
