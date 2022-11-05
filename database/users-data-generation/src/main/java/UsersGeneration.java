@@ -115,7 +115,7 @@ public class UsersGeneration
     	"Sulimo", "Tulkas", "Valaquenta", "Elentari", "Kementari"};
 	
 	// This is the path and file name where the generated user data is stored
-	private static final String STRING_ARRAY_SAMPLE = "./psr-database-users.csv";
+	private static final String STRING_ARRAY_SAMPLE = "./prs-database-users.csv";
 	
     public static void main( String[] args ) throws IOException
     {	    	
